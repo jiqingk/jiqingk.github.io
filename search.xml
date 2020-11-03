@@ -325,34 +325,6 @@
       </categories>
   </entry>
   <entry>
-    <title>react搭配amazeui环境搭建</title>
-    <url>/2020/08/19/reactAmazeui/</url>
-    <content><![CDATA[<h2 id="react搭配amazeui环境搭建"><a href="#react搭配amazeui环境搭建" class="headerlink" title="react搭配amazeui环境搭建"></a>react搭配amazeui环境搭建</h2><p>1、<strong>安装node</strong><br><a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>查看node   npm版本</p>
-<p><img src="../images/1.jpg" alt="Alt text"><br>2、<strong>安装react</strong><br>创建新的react单页面应用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、npm install  -g create-react-app</span><br></pre></td></tr></table></figure>
-<p><img src="../images/2.jpg" alt="Alt text"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">2、create-react-app  react-demo</span><br></pre></td></tr></table></figure>
-<p><img src="../images/3.png" alt="Alt text"><br>3、<strong>安装 amazeui</strong>    </p>
-<p>1)首先 cd react-demo进入到刚创建的 项目之中<br><img src="../images/4.png" alt="Alt text"><br>2)接下来 可以执行安装: </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install amazeui</span><br></pre></td></tr></table></figure>
-<p><img src="../images/5.png" alt="Alt text"><br><strong>4、安装amazeui 所需引用的react组件</strong><br><img src="../images/6.png" alt="Alt text"><br><strong>5 页面配置</strong><br><img src="../images/7.png" alt="Alt text"><br><strong>6、组件的引用</strong><br><img src="../images/8.png" alt="Alt text"><br><strong>7、运行</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;运行 npm start</span><br></pre></td></tr></table></figure>
-<p><strong>效果图（简单的按钮 展示）</strong><br><img src="../images/9.png" alt="Alt text"><br><strong>Amazeui组件</strong><br>Web组件基于 React.js 封装的 Web 组件，在 React 中，一切皆组件，无论是展示性的，还是带有交互功能的，都是组件；所有组件都是使用 JS 编写、渲染。</p>
-<p>Amaze UI React 组件分为一下几个类型：</p>
-<ul>
-<li><strong>布局相关</strong>：用于布局的组件，如网格等；</li>
-<li><strong>HTML 元素</strong>：文本域、按钮、表格等 HTML 元素增强封装；</li>
-<li><strong>导航相关：</strong>用于导航的组件；</li>
-<li><strong>常用相关</strong>：其他常用的组件，如图标等；</li>
-<li><strong>交互组件</strong>：带交互功能的组件，如模态窗口等；</li>
-<li><strong>移动组件</strong>：针对移动端设计的组件。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>前端-React</category>
-      </categories>
-  </entry>
-  <entry>
     <title>小程序实践（二）--swiper轮播图组件</title>
     <url>/2020/08/19/xcxPicRange/</url>
     <content><![CDATA[<h2 id="小程序实践（二）–swiper轮播图组件"><a href="#小程序实践（二）–swiper轮播图组件" class="headerlink" title="小程序实践（二）–swiper轮播图组件"></a>小程序实践（二）–swiper轮播图组件</h2><p>依照惯例，先看效果图：<a id="more"></a><br><img src="../images/xcx_1.gif" alt="效果图"><br>先了解下swiper组件参数配置<br><img src="../images/xcx_2.png" alt="swiper组件参数xcx_2"><br><strong>轮播实现的具体步骤如下：</strong><br>  <strong>第一步：添加图片素材，我这边是放到images下，文件以及图片名字自定义即可。</strong><br>  <img src="../images/xcx_3.png" alt="图片素材文件路径xcx_3"><br>  <strong>第二步：在wxml中进行页面布局</strong><br>  在这里呢，用到了<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html">列表渲染</a> 、 <a href="https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html">swiper组件</a>，三元运算符（注：由于小程序不能操作dom，三元运算符还有一个常用的使用场景是控件class样式输出，达到jQuery.addClass()的效果</p>
