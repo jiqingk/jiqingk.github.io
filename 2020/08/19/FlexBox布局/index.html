@@ -35,15 +35,15 @@
     var CONFIG = {"hostname":"jiqingk.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="父视图布局标题一、flexDirection1.flexDirection默认侧轴从上到下排列row:主轴(行)     column侧轴(列) reverse(反向)2.flexDirection:’row’ 主轴3.flexDirection:’row-reverse’主轴反向 二、flexWrapflexWrap 属性定义了子元素在父视图内是否允许多行排列，默认为nowrap 123nowr">
+  <meta name="description" content="JustifyContent属性定义了浏览器如何分配顺着父容器主轴的弹性（Flex）元素之间及其周围的空间，默认为flex-start。对应的这些可选项有：flex-start、center、flex-end、space-around、space-between以及space-evenly。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FlexBox布局">
 <meta property="og:url" content="https://jiqingk.github.io/2020/08/19/FlexBox%E5%B8%83%E5%B1%80/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="父视图布局标题一、flexDirection1.flexDirection默认侧轴从上到下排列row:主轴(行)     column侧轴(列) reverse(反向)2.flexDirection:’row’ 主轴3.flexDirection:’row-reverse’主轴反向 二、flexWrapflexWrap 属性定义了子元素在父视图内是否允许多行排列，默认为nowrap 123nowr">
+<meta property="og:site_name" content="Jqk">
+<meta property="og:description" content="JustifyContent属性定义了浏览器如何分配顺着父容器主轴的弹性（Flex）元素之间及其周围的空间，默认为flex-start。对应的这些可选项有：flex-start、center、flex-end、space-around、space-between以及space-evenly。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-19T07:41:34.824Z">
-<meta property="article:modified_time" content="2020-01-13T09:15:32.000Z">
+<meta property="article:modified_time" content="2020-08-21T08:12:11.415Z">
 <meta property="article:author" content="Jqk">
 <meta name="twitter:card" content="summary">
 
@@ -60,7 +60,7 @@
   };
 </script>
 
-  <title>FlexBox布局 | Hexo</title>
+  <title>FlexBox布局 | Jqk</title>
   
 
 
@@ -91,7 +91,11 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<link rel="alternate" href="/atom.xml" title="Jqk" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -112,7 +116,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">Jqk</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">在逐梦的路上，总会有人的梦想枯萎，只有提升自我才可以涅槃重生</p>
@@ -135,19 +139,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -219,7 +213,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -240,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-13 17:15:32" itemprop="dateModified" datetime="2020-01-13T17:15:32+08:00">2020-01-13</time>
+                <time title="修改时间：2020-08-21 16:12:11" itemprop="dateModified" datetime="2020-08-21T16:12:11+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,6 +247,7 @@
             </span>
 
           
+            <div class="post-description">JustifyContent属性定义了浏览器如何分配顺着父容器主轴的弹性（Flex）元素之间及其周围的空间，默认为flex-start。对应的这些可选项有：flex-start、center、flex-end、space-around、space-between以及space-evenly。 </div>
 
         </div>
       </header>
@@ -437,7 +432,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>

@@ -35,15 +35,15 @@
     var CONFIG = {"hostname":"jiqingk.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1.JavaScript中的Date对象在Safari与IOS中的坑 1var date &#x3D;new Date(&quot;2018-07-25 19:25&quot;); 这段代码是获得字符中指定的日期，它Firefox、Chrome中就能运行，但是放在Safari就会报错，错误是NaN解决办法： 123&#x2F;&#x2F;将xxxx-xx-xx的时间格式，转换为 xxxx&#x2F;xx&#x2F;xx的格式 var value">
+  <meta name="description" content="移动开发IOS和安卓遇到的兼容性问题,.JavaScript中的Date对象在Safari与IOS中的坑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="移动开发IOS和安卓遇到的兼容性问题">
 <meta property="og:url" content="https://jiqingk.github.io/2020/08/19/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91IOS%E5%92%8C%E5%AE%89%E5%8D%93%E7%A2%B0%E5%88%B0%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.JavaScript中的Date对象在Safari与IOS中的坑 1var date &#x3D;new Date(&quot;2018-07-25 19:25&quot;); 这段代码是获得字符中指定的日期，它Firefox、Chrome中就能运行，但是放在Safari就会报错，错误是NaN解决办法： 123&#x2F;&#x2F;将xxxx-xx-xx的时间格式，转换为 xxxx&#x2F;xx&#x2F;xx的格式 var value">
+<meta property="og:site_name" content="Jqk">
+<meta property="og:description" content="移动开发IOS和安卓遇到的兼容性问题,.JavaScript中的Date对象在Safari与IOS中的坑">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-19T07:41:34.883Z">
-<meta property="article:modified_time" content="2020-01-16T08:15:58.000Z">
+<meta property="article:modified_time" content="2020-08-21T07:58:19.863Z">
 <meta property="article:author" content="Jqk">
 <meta name="twitter:card" content="summary">
 
@@ -60,7 +60,7 @@
   };
 </script>
 
-  <title>移动开发IOS和安卓遇到的兼容性问题 | Hexo</title>
+  <title>移动开发IOS和安卓遇到的兼容性问题 | Jqk</title>
   
 
 
@@ -91,7 +91,11 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<link rel="alternate" href="/atom.xml" title="Jqk" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -112,7 +116,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">Jqk</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">在逐梦的路上，总会有人的梦想枯萎，只有提升自我才可以涅槃重生</p>
@@ -135,19 +139,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -219,7 +213,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -240,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-16 16:15:58" itemprop="dateModified" datetime="2020-01-16T16:15:58+08:00">2020-01-16</time>
+                <time title="修改时间：2020-08-21 15:58:19" itemprop="dateModified" datetime="2020-08-21T15:58:19+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,6 +247,7 @@
             </span>
 
           
+            <div class="post-description">移动开发IOS和安卓遇到的兼容性问题,.JavaScript中的Date对象在Safari与IOS中的坑</div>
 
         </div>
       </header>
@@ -267,7 +262,8 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date =<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2018-07-25 19:25&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p>这段代码是获得字符中指定的日期，它Firefox、Chrome中就能运行，但是放在Safari就会报错，错误是NaN<br>解决办法：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式 </span></span><br><span class="line"><span class="keyword">var</span> value = <span class="string">&#x27;2018-07-25 19:25&#x27;</span>;</span><br><span class="line">value = value.replace(<span class="regexp">/\-/g</span>, <span class="string">&quot;/&quot;</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>2.禁止图片点击放大</strong><br>部分安卓手机点击图片会放大，如需要禁止放大，只需要设置css属性</p>
+<a id="more"></a>**2.禁止图片点击放大**
+<p>部分安卓手机点击图片会放大，如需要禁止放大，只需要设置css属性</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">img&#123; </span><br><span class="line">    pointer-events: none; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 <p>这个会让img标签的点击事件失效，如果想要给图片添加点击事件就要给上面再写一层<br><strong>3.禁止页面缩放</strong><br>这样设置在ios10系统中是失效的，如果需要禁止ios缩放，下面代码亲测有用 </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">      <span class="comment">//禁止双击放大 </span></span><br><span class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;  </span><br><span class="line">            <span class="keyword">if</span>(event.touches.length&gt;<span class="number">1</span>)&#123;  </span><br><span class="line">                event.preventDefault();  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;)  </span><br><span class="line">        <span class="keyword">var</span> lastTouchEnd=<span class="number">0</span>;  </span><br><span class="line">        <span class="built_in">document</span>.addEventListener(<span class="string">&#x27;touchend&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;  </span><br><span class="line">            <span class="keyword">var</span> now=(<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime();  </span><br><span class="line">            <span class="keyword">if</span>(now-lastTouchEnd&lt;=<span class="number">300</span>)&#123;  </span><br><span class="line">                event.preventDefault();  </span><br><span class="line">            &#125;  </span><br><span class="line">            lastTouchEnd=now;  </span><br><span class="line">        &#125;,<span class="literal">false</span>);</span><br><span class="line">      <span class="comment">//禁止手势放大</span></span><br><span class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">&#x27;gesturestart&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">         event.preventDefault();</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -441,7 +437,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>

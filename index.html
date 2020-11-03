@@ -36,9 +36,9 @@
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Jqk">
 <meta property="og:url" content="https://jiqingk.github.io/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Jqk">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Jqk">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>Jqk</title>
   
 
 
@@ -87,7 +87,11 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<script type="text/javascript"
+color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<link rel="alternate" href="/atom.xml" title="Jqk" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -108,7 +112,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">Jqk</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">在逐梦的路上，总会有人的梦想枯萎，只有提升自我才可以涅槃重生</p>
@@ -131,19 +135,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a>
-
-  </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">5</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
@@ -214,7 +208,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -236,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-24 15:28:58" itemprop="dateModified" datetime="2019-12-24T15:28:58+08:00">2019-12-24</time>
+                <time title="修改时间：2020-08-21 15:58:36" itemprop="dateModified" datetime="2020-08-21T15:58:36+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -259,14 +253,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="原生js实现小游戏–别踩白块"><a href="#原生js实现小游戏–别踩白块" class="headerlink" title="原生js实现小游戏–别踩白块"></a>原生js实现小游戏–别踩白块</h2><p>先看效果图<br>    <img src="https://img-blog.csdnimg.cn/20191204110407957.gif" alt="在这里插入图片描述"></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bigbox&quot;</span>&gt;</span>       </span><br><span class="line">     <span class="comment">&lt;!-- 显示游戏的区域 --&gt;</span>  </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;gamequyu&quot;</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- 上面显示一个游戏开始的按钮 --&gt;</span>  </span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;start&quot;</span>&gt;</span>游戏开始<span class="tag">&lt;/<span class="name">div</span>&gt;</span>            </span><br><span class="line">          <span class="comment">&lt;!-- 再显示一个游戏的主体部分 --&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;zhuti&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>      </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;zhezhaoceng&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span>       </span><br><span class="line">     <span class="comment">&lt;!-- 下面再显示一个计分的盒子 --&gt;</span>       </span><br><span class="line">     <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;jifen&quot;</span>&gt;</span>当前分数:0<span class="tag">&lt;/<span class="name">div</span>&gt;</span>   </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 先找到主体内容的盒子,添加到这个盒子中去    </span></span><br><span class="line"><span class="keyword">var</span> zhuti = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;zhuti&#x27;</span>)[<span class="number">0</span>];    </span><br><span class="line"><span class="comment">//找到计分 , 每点击一次, 就让分数++;    </span></span><br><span class="line"><span class="keyword">var</span> jifen = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;jifen&#x27;</span>)[<span class="number">0</span>];    </span><br><span class="line"><span class="comment">// 找到游戏开始按钮, 点击让它影藏,结束时显示并把里面的文字改变为&#x27;游戏结束&#x27;    </span></span><br><span class="line"><span class="keyword">var</span> start = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;start&#x27;</span>)[<span class="number">0</span>];    </span><br><span class="line"><span class="comment">// 找到遮罩层, 结束游戏的时候显示    </span></span><br><span class="line"><span class="keyword">var</span> zhezhaoceng = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&#x27;zhezhaoceng&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addbox</span>(<span class="params">classname</span>) </span>&#123;</span><br><span class="line"><span class="comment">// 思路:         </span></span><br><span class="line"><span class="comment">// 1: 先封装一个函数动态的创建盒子;        </span></span><br><span class="line"><span class="comment">// 2: 一个盒子里装了四个小盒子;        </span></span><br><span class="line"><span class="comment">// 3: 随机一个数,让这四个小盒子的某一个的颜色改为黑色 ;        </span></span><br><span class="line"><span class="comment">// 4: 给这个小盒子添加类名,设置样式;        </span></span><br><span class="line"><span class="comment">// 5: 随机数作为下标, 给这个随机数的下标的小盒子添加一个类名;        </span></span><br><span class="line"><span class="comment">// 6: 添加到&#x27;zhuti&#x27;里面去,显示在页面上(如果zhuti里面有内容了,就要添加到所有内容的最前面,如果没有,接直接添加)</span></span><br><span class="line"> <span class="comment">// 生成随机数作为四个盒子的下标        </span></span><br><span class="line"> <span class="keyword">var</span> index = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">4</span>)        </span><br><span class="line"> <span class="comment">// console.log(index);       </span></span><br><span class="line"> <span class="comment">//创建一个盒子;         </span></span><br><span class="line"> <span class="keyword">var</span> bigdiv = <span class="built_in">document</span>.createElement(<span class="string">&#x27;div&#x27;</span>);       </span><br><span class="line"> bigdiv.className = classname;        </span><br><span class="line"> <span class="comment">// 再依次创建四个小盒子;添加到刚刚创建的大盒子中;</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;              </span><br><span class="line">     <span class="keyword">var</span> smallbox = <span class="built_in">document</span>.createElement(<span class="string">&#x27;div&#x27;</span>)      </span><br><span class="line">     bigdiv.appendChild(smallbox)  </span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">// 判断主体里面有没有盒子 ;         </span></span><br><span class="line"> <span class="comment">// 如果已经存在盒子,就要添加到它们的最前面        </span></span><br><span class="line"> <span class="comment">// 如果没有,就可以直接添加到页面上</span></span><br><span class="line"> <span class="keyword">if</span> (zhuti.children.length == <span class="number">0</span>) &#123;           </span><br><span class="line">      zhuti.appendChild(bigdiv) </span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;           </span><br><span class="line">     zhuti.insertBefore(bigdiv, zhuti.children[<span class="number">0</span>])     </span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">// 给随机下标的盒子添加样式的背景色为黑色;       </span></span><br><span class="line">  bigdiv.children[index].style.backgroundColor = <span class="string">&#x27;black&#x27;</span>;        </span><br><span class="line">  <span class="comment">// 再给这个随机的盒子添加一点东西,可以用来做判断        </span></span><br><span class="line">  bigdiv.children[index].className = <span class="string">&#x27;random_box&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"> <span class="comment">//计分与控制速度的函数  </span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">move</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">   <span class="comment">// 封装一个计时器移动的方法, 让主体内的内容动起来;        </span></span><br><span class="line">   <span class="comment">// 思路:         </span></span><br><span class="line">   <span class="comment">//      1: 先获取元素的最终样式,距离顶部的top值;            </span></span><br><span class="line">   <span class="comment">//      2: 声明两个变量; 一个用来改变元素距离顶部的top值; 一个用来计分数;  </span></span><br><span class="line">  <span class="keyword">var</span> num = <span class="number">0</span>;     </span><br><span class="line">  <span class="keyword">var</span> sudu = <span class="number">5</span>;        </span><br><span class="line">  <span class="comment">// 创建一个计时器让它缓动显示到页面        </span></span><br><span class="line">  <span class="comment">//在样式里面就设置了top值为-150px；        </span></span><br><span class="line">  <span class="comment">//通过计时器让它的top值缓动到页面， 当它的top值等于0的时候，又让它的top值变为-150px；        </span></span><br><span class="line">  <span class="comment">//就调用创建元素的方法再创建一个盒子，让它插在这个显示在页面上的盒子的前面</span></span><br><span class="line">  obj.timeID = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> nowtop = <span class="built_in">parseInt</span>(getComputedStyle(obj)[<span class="string">&#x27;top&#x27;</span>]) + sudu;</span><br><span class="line">      obj.style.top = nowtop + <span class="string">&#x27;px&#x27;</span>;            </span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">parseInt</span>(getComputedStyle(obj)[<span class="string">&#x27;top&#x27;</span>]) &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">        addbox(<span class="string">&#x27;row&#x27;</span>)</span><br><span class="line">        obj.style.top = <span class="number">-150</span> + <span class="string">&#x27;px&#x27;</span>            </span><br><span class="line">      &#125;</span><br><span class="line">  <span class="comment">// 判断条件：在移动的时候，如果用户没有点击到带有颜色的盒子，让盒子超过了界限；就结束游戏；</span></span><br><span class="line">  <span class="keyword">if</span> (obj.children.length == <span class="number">6</span>) &#123;                </span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;                  </span><br><span class="line">            <span class="keyword">if</span> (obj.children[obj.children.length - <span class="number">1</span>].children[i].className == <span class="string">&#x27;random_box&#x27;</span>) &#123;</span><br><span class="line">                        </span><br><span class="line">                        jifen.innerHTML = <span class="string">&#x27;当前最高得分:&#x27;</span> + num;                        </span><br><span class="line">                        start.style.display = <span class="string">&#x27;block&#x27;</span>                        </span><br><span class="line">                        start.innerHTML = <span class="string">&#x27;小朋友, 游戏结束&#x27;</span>;                        </span><br><span class="line">                        start.style.display = <span class="string">&#x27;block&#x27;</span>;                        </span><br><span class="line">                        start.style.backgroundColor = <span class="string">&#x27;green&#x27;</span>;                        </span><br><span class="line">                        start.style.height = <span class="number">60</span> + <span class="string">&#x27;px&#x27;</span>;                        </span><br><span class="line">                        start.style.fontSize = <span class="number">30</span> + <span class="string">&#x27;px&#x27;</span>;                        </span><br><span class="line">                        zhezhaoceng.style.display = <span class="string">&#x27;block&#x27;</span>;                        </span><br><span class="line">                        <span class="built_in">clearInterval</span>(obj.timeID)</span><br><span class="line">                    &#125;                </span><br><span class="line">         &#125;                </span><br><span class="line">                    <span class="comment">// 让主体的内容的长度永远等于6,如果不等于6,就会出现按下第一个带&#x27;random_box&#x27;类名的小盒子,之后就不会再回到以上的判断里面了;                </span></span><br><span class="line">                    obj.removeChild(obj.children[obj.children.length - <span class="number">1</span>])            </span><br><span class="line">   &#125;</span><br><span class="line">    <span class="comment">// console.log(obj.children.length)</span></span><br><span class="line">    <span class="comment">// 判断用户点击的时候:条件:如果没有点中指定的盒子(类名为&#x27;random_box&#x27;)的盒子,就结束游戏;不然就计分num++;            </span></span><br><span class="line">    obj.onmousedown = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;                </span><br><span class="line">    <span class="comment">// 根据事件对象里面的事件源来进行判断;                </span></span><br><span class="line">    <span class="comment">//当它的事件源的名字等于&#x27;random_box&#x27;的时候;</span></span><br><span class="line">    <span class="keyword">if</span> (event.target.className == <span class="string">&#x27;random_box&#x27;</span>) &#123;                    </span><br><span class="line">    <span class="comment">// 让这个事件源的的背景色变为红色;                    </span></span><br><span class="line">    event.target.style.backgroundColor = <span class="string">&#x27;red&#x27;</span>;                    </span><br><span class="line">    <span class="comment">//当用户点击了事件源时,把他的类名清空, 不然只变了颜色,到了第6个,判断类名还是&#x27;random_box&#x27;时, 就会结束游戏;                    </span></span><br><span class="line">    event.target.className = <span class="string">&#x27;&#x27;</span>;                    </span><br><span class="line">    <span class="comment">// 计分                    </span></span><br><span class="line">    num++;                    </span><br><span class="line">    <span class="comment">// 显示在当前得分的盒子里                    </span></span><br><span class="line">    jifen.innerHTML = <span class="string">&#x27;当前得分&#x27;</span> + num;                </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;                    </span><br><span class="line">    <span class="comment">// 结束游戏                    </span></span><br><span class="line">    <span class="built_in">clearInterval</span>(obj.timeID)                    </span><br><span class="line">    start.style.display = <span class="string">&#x27;block&#x27;</span>;                    </span><br><span class="line">    start.style.backgroundColor = <span class="string">&#x27;green&#x27;</span>;                    </span><br><span class="line">    start.style.height = <span class="number">60</span> + <span class="string">&#x27;px&#x27;</span>;                    </span><br><span class="line">    start.style.fontSize = <span class="number">30</span> + <span class="string">&#x27;px&#x27;</span>;                    </span><br><span class="line">    start.innerHTML = <span class="string">&#x27;游戏结束!再来一局&#x27;</span>;                    </span><br><span class="line">    jifen.innerHTML = <span class="string">&#x27;最终得分&#x27;</span> + num;                    </span><br><span class="line">    <span class="comment">// 让遮罩层显示                    </span></span><br><span class="line">    zhezhaoceng.style.display = <span class="string">&#x27;block&#x27;</span>;                </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 加速(判断分数到了多少时,让主体下降的top值变大)               </span></span><br><span class="line">     <span class="keyword">if</span> (num % <span class="number">5</span> == <span class="number">0</span>) &#123;                    </span><br><span class="line">         sudu++;                        </span><br><span class="line">      &#125;            </span><br><span class="line">     &#125;</span><br><span class="line">        </span><br><span class="line">        &#125;, <span class="number">20</span>)    </span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// 当它点击开始按钮的时候,再调用函数;运行起来;    </span></span><br><span class="line">     start.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;        </span><br><span class="line">     <span class="comment">//如果事重新来一局,那就先把页面上已经创建的盒子先清除;        </span></span><br><span class="line">     <span class="keyword">if</span> (zhuti.children.length != <span class="number">0</span>) &#123;            </span><br><span class="line">     zhuti.innerHTML = <span class="string">&#x27;&#x27;</span>        </span><br><span class="line">     &#125;        </span><br><span class="line">     <span class="comment">// 让遮罩层隐藏        </span></span><br><span class="line">     zhezhaoceng.style.display = <span class="string">&#x27;none&#x27;</span>;        </span><br><span class="line">     <span class="comment">// 让开始的按钮影藏         </span></span><br><span class="line">     <span class="built_in">this</span>.style.display = <span class="string">&#x27;none&#x27;</span>;        </span><br><span class="line">     jifen.innerHTML = <span class="string">&#x27;当前得分:0&#x27;</span>        </span><br><span class="line">     move(zhuti)    </span><br><span class="line">     &#125;</span><br><span class="line">     </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">CSS</span>&gt;</span><br><span class="line"><span class="selector-class">.bigbox</span> &#123;            </span><br><span class="line">    <span class="attribute">width</span>: <span class="number">400px</span>;            </span><br><span class="line">    <span class="attribute">height</span>: auto;            </span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#2d2d2d</span>;            </span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">100px</span> auto <span class="number">0</span> auto;        </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.gamequyu</span> &#123;  </span><br><span class="line">          <span class="attribute">width</span>: <span class="number">100%</span>;            </span><br><span class="line">          <span class="attribute">height</span>: <span class="number">600px</span>;            </span><br><span class="line">          <span class="attribute">position</span>: relative;           </span><br><span class="line">          <span class="attribute">overflow</span>: hidden;           </span><br><span class="line">          <span class="attribute">background-color</span>: <span class="number">#fefefe</span>;           </span><br><span class="line">          <span class="comment">/* background: url(&quot;./dog.png&quot;) no-repeat; */</span>           </span><br><span class="line">          <span class="attribute">background-size</span>: <span class="number">100%</span>;        </span><br><span class="line"> &#125;</span><br><span class="line"> <span class="selector-class">.start</span> &#123;        </span><br><span class="line">     <span class="attribute">position</span>: absolute;            </span><br><span class="line">     <span class="attribute">width</span>: <span class="number">400px</span>;            </span><br><span class="line">     <span class="attribute">height</span>: <span class="number">50px</span>;            </span><br><span class="line">     <span class="attribute">color</span>: white;            </span><br><span class="line">     <span class="attribute">text-align</span>: center;            </span><br><span class="line">     <span class="attribute">line-height</span>: <span class="number">50px</span>;            </span><br><span class="line">     <span class="attribute">background-color</span>: brown;            </span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">30px</span>;            </span><br><span class="line">     <span class="attribute">cursor</span>: pointer;            </span><br><span class="line">     <span class="attribute">z-index</span>: <span class="number">9999</span>;        </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.zhuti</span> &#123;        </span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;            </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">600px</span>;            </span><br><span class="line">    <span class="attribute">position</span>: absolute;           </span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">150px</span>;       </span><br><span class="line">&#125;</span><br><span class="line"> <span class="selector-class">.jifen</span> &#123;       </span><br><span class="line">       <span class="attribute">width</span>: <span class="number">400px</span>;            </span><br><span class="line">       <span class="attribute">height</span>: <span class="number">50px</span>;           </span><br><span class="line">       <span class="attribute">font-size</span>: <span class="number">30px</span>;            </span><br><span class="line">       <span class="attribute">text-align</span>: center;            </span><br><span class="line">       <span class="attribute">line-height</span>: <span class="number">50px</span>;            </span><br><span class="line">       <span class="attribute">color</span>: white;            </span><br><span class="line">       <span class="attribute">margin</span>: <span class="number">0</span> auto;           </span><br><span class="line">       <span class="attribute">background-color</span>: brown;       </span><br><span class="line"> &#125;</span><br><span class="line"><span class="selector-class">.row</span> &#123;       </span><br><span class="line">        <span class="attribute">width</span>: <span class="number">400px</span>;            </span><br><span class="line">        <span class="attribute">height</span>: <span class="number">150px</span></span><br><span class="line"> &#125;</span><br><span class="line"> <span class="selector-class">.row</span> <span class="selector-tag">div</span> &#123;      </span><br><span class="line">       <span class="attribute">width</span>: <span class="number">100px</span>;            </span><br><span class="line">       <span class="attribute">height</span>: <span class="number">150px</span>;            </span><br><span class="line">       <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#343434</span>;            </span><br><span class="line">       <span class="attribute">border-top-width</span>: <span class="number">0</span>;           </span><br><span class="line">        <span class="attribute">border-left-width</span>: <span class="number">0</span>;            </span><br><span class="line">        <span class="attribute">float</span>: left;            </span><br><span class="line">        <span class="attribute">cursor</span>: pointer;            </span><br><span class="line">        <span class="attribute">box-sizing</span>: border-box;       </span><br><span class="line"> &#125;</span><br><span class="line"> <span class="selector-class">.zhezhaoceng</span> &#123;        </span><br><span class="line">     <span class="attribute">width</span>: <span class="number">100%</span>;            </span><br><span class="line">     <span class="attribute">height</span>: <span class="number">100%</span>;            </span><br><span class="line">     <span class="attribute">position</span>: absolute;            </span><br><span class="line">     <span class="attribute">z-index</span>: <span class="number">999</span>;            </span><br><span class="line">     <span class="attribute">display</span>: none;        </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-
+          <p>原生js实现小游戏--别踩白块<Html> <div class="bigbox">        <!-- 显示游戏的区域 -->   <div class="gamequyu"> <!-- 上面显示一个游戏开始的按钮 -->   <div class="start">游戏开始</div>             <!-- 再显示一个游戏的主体部分 -->  <div class="zhuti"></div>       <div class="zhezhaoceng"></div> </div>        <!-- 下面再显示一个计分的盒子 -->        <div class="jifen">当前分数:0</div>  <!-- more -->  </div></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0%E5%B0%8F%E6%B8%B8%E6%88%8F--%E5%88%AB%E8%B8%A9%E7%99%BD%E5%9D%97/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -300,7 +295,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -322,7 +317,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-16 16:15:58" itemprop="dateModified" datetime="2020-01-16T16:15:58+08:00">2020-01-16</time>
+                <time title="修改时间：2020-08-21 15:58:19" itemprop="dateModified" datetime="2020-08-21T15:58:19+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -345,26 +340,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>1.JavaScript中的Date对象在Safari与IOS中的坑</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date =<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;2018-07-25 19:25&quot;</span>);</span><br></pre></td></tr></table></figure>
-<p>这段代码是获得字符中指定的日期，它Firefox、Chrome中就能运行，但是放在Safari就会报错，错误是NaN<br>解决办法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式 </span></span><br><span class="line"><span class="keyword">var</span> value = <span class="string">&#x27;2018-07-25 19:25&#x27;</span>;</span><br><span class="line">value = value.replace(<span class="regexp">/\-/g</span>, <span class="string">&quot;/&quot;</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>2.禁止图片点击放大</strong><br>部分安卓手机点击图片会放大，如需要禁止放大，只需要设置css属性</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">img&#123; </span><br><span class="line">    pointer-events: none; </span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-<p>这个会让img标签的点击事件失效，如果想要给图片添加点击事件就要给上面再写一层<br><strong>3.禁止页面缩放</strong><br>这样设置在ios10系统中是失效的，如果需要禁止ios缩放，下面代码亲测有用 </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </span><br><span class="line">      <span class="comment">//禁止双击放大 </span></span><br><span class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">&#x27;touchstart&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;  </span><br><span class="line">            <span class="keyword">if</span>(event.touches.length&gt;<span class="number">1</span>)&#123;  </span><br><span class="line">                event.preventDefault();  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;)  </span><br><span class="line">        <span class="keyword">var</span> lastTouchEnd=<span class="number">0</span>;  </span><br><span class="line">        <span class="built_in">document</span>.addEventListener(<span class="string">&#x27;touchend&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;  </span><br><span class="line">            <span class="keyword">var</span> now=(<span class="keyword">new</span> <span class="built_in">Date</span>()).getTime();  </span><br><span class="line">            <span class="keyword">if</span>(now-lastTouchEnd&lt;=<span class="number">300</span>)&#123;  </span><br><span class="line">                event.preventDefault();  </span><br><span class="line">            &#125;  </span><br><span class="line">            lastTouchEnd=now;  </span><br><span class="line">        &#125;,<span class="literal">false</span>);</span><br><span class="line">      <span class="comment">//禁止手势放大</span></span><br><span class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">&#x27;gesturestart&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">         event.preventDefault();</span><br><span class="line">      &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>4.禁止 iOS 识别长串数字为电话</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=<span class="string">&quot;format-detection&quot;</span> content=<span class="string">&quot;telephone=no&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>5.禁止复制、选中文本</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">设置CSS属性 -webkit-user-select:none</span><br></pre></td></tr></table></figure>
-<p><strong>6.JS跳转手机QQ的聊天页面</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Android: URL</span></span><br><span class="line">mqqwpa:<span class="comment">//im/chat?chat_type=wpa&amp;uin=your QQ&amp;version=1&amp;src_type=web</span></span><br><span class="line"><span class="comment">//IOS: URL</span></span><br><span class="line">mqq:<span class="comment">//im/chat?chat_type=wpa&amp;uin=your QQ&amp;version=1&amp;src_type=web</span></span><br></pre></td></tr></table></figure>
-<p><strong>7.一些情况下对非可点击元素如(label,span）监听点击事件，不会在IOS下触发，css增加<font color=red>cursor:pointer</font>就搞定了</strong><br><strong>8.上下拉动滚动条时卡顿、慢（未测试）</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">-webkit-overflow-scrolling: touch;</span><br><span class="line">overflow-scrolling: touch;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Android3+和iOS5+支持CSS3的新属性为<font color=red>overflow-scrolling</font><br><strong>9.清除button,input,a标签的默认样式</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a:hover, <span class="attr">a</span>:active,button,<span class="attr">input</span>:focus&#123;</span><br><span class="line">  outline: none;</span><br><span class="line">  border: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+          <p>移动开发IOS和安卓遇到的兼容性问题,.JavaScript中的Date对象在Safari与IOS中的坑</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91IOS%E5%92%8C%E5%AE%89%E5%8D%93%E7%A2%B0%E5%88%B0%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -398,7 +382,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -420,7 +404,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-17 10:27:32" itemprop="dateModified" datetime="2020-01-17T10:27:32+08:00">2020-01-17</time>
+                <time title="修改时间：2020-08-21 15:57:49" itemprop="dateModified" datetime="2020-08-21T15:57:49+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -443,14 +427,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="小程序实践（一）–首页tab选项实现"><a href="#小程序实践（一）–首页tab选项实现" class="headerlink" title="小程序实践（一）–首页tab选项实现"></a>小程序实践（一）–首页tab选项实现</h2><p><strong>先看下效果图：</strong><br><img src="https://img-blog.csdnimg.cn/20200117102548672.gif" alt="在这里插入图片描述"><br><strong>底部tab切换的实现主要在App.json中的 tabBar列表。如下图所示：</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200117102608596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>接下来详细介绍一下App.json中的参数</strong><br>1.默认情况下主要分为Pages和window两个模块，tabBar是我们在需要的时候添加进去的<br>2.pages–我们开发中所写的页面路径都需要引用在这里<br>3.windows–设置小程序的状态栏、导航条、标题、窗口背景色，详细如下：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200117102627935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>4.tabBar 是一个数组，只能配置最少2个、最多5个 tab，tab 按数组的顺序排序。可查看官方API文档 tabBar</strong>　<br>　属性说明：<br><img src="https://img-blog.csdnimg.cn/20200117102638981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>其中 list 接受一个数组，数组中的每个项都是一个对象，其属性值如下：<br><img src="https://img-blog.csdnimg.cn/20200117102653907.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>最后我们来看下底部tabBar功能的具体实现<br>　一、首先我们先创建两个自己所需要的页面，页面结构分为js、json、wxml以及wxss四部分组成　　js:处理页面逻辑性问题；json:顶部导航名称命名-navigationBarTitleText；wxml:布局页面结构；wxss:也就是所谓的样式css<br>　二、创建一个存放图片的文件夹，一般都命名为images<br>　三、需要在app.json中配置tabBar，详细的配置参数说明，在上面已经说明。进行配置就可以了。<br>　四、项目目录结构</strong><br><img src="https://img-blog.csdnimg.cn/20200117102659552.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>　<strong>五、附上最终代码：</strong>
-　</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;pages&quot;:[   </span><br><span class="line">    &quot;pages&#x2F;home&#x2F;home&quot;,</span><br><span class="line">    &quot;pages&#x2F;myself&#x2F;myself&quot;,</span><br><span class="line">    &quot;pages&#x2F;index&#x2F;index&quot;,</span><br><span class="line">    &quot;pages&#x2F;logs&#x2F;logs&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;window&quot;:&#123;</span><br><span class="line">    &quot;backgroundTextStyle&quot;:&quot;light&quot;,</span><br><span class="line">    &quot;navigationBarBackgroundColor&quot;: &quot;#000000&quot;,</span><br><span class="line">    &quot;navigationBarTitleText&quot;: &quot;首页table实践&quot;,</span><br><span class="line">    &quot;navigationBarTextStyle&quot;:&quot;white&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;tabBar&quot;: &#123;</span><br><span class="line">    &quot;list&quot;: [&#123;</span><br><span class="line">      &quot;pagePath&quot;: &quot;pages&#x2F;home&#x2F;home&quot;,</span><br><span class="line">      &quot;text&quot;: &quot;首页&quot;,</span><br><span class="line">      &quot;iconPath&quot;: &quot;pages&#x2F;images&#x2F;home_u.png&quot;,</span><br><span class="line">      &quot;selectedIconPath&quot;: &quot;pages&#x2F;images&#x2F;home.png&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;pagePath&quot;: &quot;pages&#x2F;myself&#x2F;myself&quot;,</span><br><span class="line">      &quot;text&quot;: &quot;我的&quot;,</span><br><span class="line">      &quot;iconPath&quot;: &quot;pages&#x2F;images&#x2F;my_u.png&quot;,</span><br><span class="line">      &quot;selectedIconPath&quot;: &quot;pages&#x2F;images&#x2F;my.png&quot;</span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>　</p>
-
+          <p>小程序实践（一）--首页tab选项实现</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E8%B7%B5%EF%BC%88%E4%B8%80%EF%BC%89--%E9%A6%96%E9%A1%B5tab%E9%80%89%E9%A1%B9%E5%AE%9E%E7%8E%B0/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -484,7 +469,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -506,7 +491,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-17 10:38:18" itemprop="dateModified" datetime="2020-01-17T10:38:18+08:00">2020-01-17</time>
+                <time title="修改时间：2020-08-21 15:57:50" itemprop="dateModified" datetime="2020-08-21T15:57:50+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -529,24 +514,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="小程序实践（四）–页面带参传值、JSON数据传递"><a href="#小程序实践（四）–页面带参传值、JSON数据传递" class="headerlink" title="小程序实践（四）–页面带参传值、JSON数据传递"></a>小程序实践（四）–页面带参传值、JSON数据传递</h2><p>今天呢写了一个（物流跟踪）列子，将通过这个例子来向大家介绍一下小程序是如何带参跳转、JSON数组的传递与解析。先看下效果图：<br><img src="https://img-blog.csdnimg.cn/20200117103802959.png" alt="在这里插入图片描述"><br>让我们来看一下本次案例中运用到的函数<br>1）页面跳转的方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateTo(&#123;</span><br><span class="line">      url: &#39;..&#x2F;logistics&#x2F;logistics?dataList&#x3D;&#39; + dataList,</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>2）我们在参数传递的时候数据中可能会有一些特殊字符，例如 ;/? : @ &amp;=+$,#所以我们需要用函数将其进行编码，也就是下面所说的两个函数　　</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">encodeURIComponent ();  &#x2F;&#x2F;函数把字符串编码为 URI 组件。有了编码自然也会有相对的解码函数</span><br><span class="line"></span><br><span class="line">decodeURIComponent();&#x2F;&#x2F;函数可把字符串作为 URI 组件进行解码。</span><br></pre></td></tr></table></figure>
-<p>3）在传递json的时候，我们需要将其转换为字符串传值，而接收的时候我们需要将json转换为对象接收，那就用到了下面的两个函数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">JSON.stringify();&#x2F;&#x2F;将json转成字符串传值</span><br><span class="line">JSON.parse();&#x2F;&#x2F;将字符串转成对象接收 </span><br></pre></td></tr></table></figure>
-<p>4)我们接收解析好的JSON如何展示在页面中呢，小程序中一般多用setData方法改变页面信息或者是刷新之后与后台交互获取最新信息。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.setData(&#123;</span><br><span class="line">    参数：值</span><br><span class="line">&#125;)   </span><br></pre></td></tr></table></figure>
-<p>以上就是这次案例所用到的函数及方法，最后附上代码，便于大家参考：<br>一级页面传参：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;view bindtap&#x3D;&#39;logisiticsGZFn&#39; class&#x3D;&quot;logisi&quot;&gt;查看物流&lt;&#x2F;view&gt;   </span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**查看物流 *&#x2F;</span><br><span class="line">  logisiticsGZFn: function(e) &#123;</span><br><span class="line">    var Traces&#x3D; [&#123;&#x2F;&#x2F;JSON模拟数据，项目中可以换取真实的</span><br><span class="line">      &quot;time&quot;: &quot;2014&#x2F;06&#x2F;25 08:05:37&quot;,</span><br><span class="line">      &quot;context&quot;: &quot;正在派件..(派件人:邓裕富,电话:18718866310)[深圳 市]&quot;,</span><br><span class="line">      &quot;Remark&quot;: null</span><br><span class="line">    &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;time&quot;: &quot;2014&#x2F;06&#x2F;25 04:01:28&quot;,</span><br><span class="line">        &quot;context&quot;: &quot;快件在 深圳集散中心 ,准备送往下一站 深圳 [深圳市]&quot;,</span><br><span class="line">        &quot;Remark&quot;: null</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;time&quot;: &quot;2014&#x2F;06&#x2F;25 01:41:06&quot;,</span><br><span class="line">        &quot;context&quot;: &quot;快件在 深圳集散中心 [深圳市]&quot;,</span><br><span class="line">        &quot;Remark&quot;: null</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;time&quot;: &quot;2014&#x2F;06&#x2F;24 20:18:58&quot;,</span><br><span class="line">        &quot;context&quot;: &quot;已收件[深圳市]&quot;,</span><br><span class="line">        &quot;Remark&quot;: null</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;time&quot;: &quot;2014&#x2F;06&#x2F;24 20:55:28&quot;,</span><br><span class="line">        &quot;context&quot;: &quot;快件在 深圳 ,准备送往下一站 深圳集散中心 [深圳市]&quot;,</span><br><span class="line">        &quot;Remark&quot;: null</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;time&quot;: &quot;2014&#x2F;06&#x2F;25 10:23:03&quot;,</span><br><span class="line">        &quot;context&quot;: &quot;派件已签收[深圳市]&quot;,</span><br><span class="line">        &quot;Remark&quot;: null</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;time&quot;: &quot;2014&#x2F;06&#x2F;25 10:23:03&quot;,</span><br><span class="line">        &quot;context&quot;: &quot;签收人是：已签收[深圳市]&quot;,</span><br><span class="line">        &quot;Remark&quot;: null</span><br><span class="line">      &#125;</span><br><span class="line">    ];</span><br><span class="line">    var dataList&#x3D;encodeURIComponent(JSON.stringify(Traces));&#x2F;&#x2F;函数可把字符串作为 URI 组件进行编码</span><br><span class="line">    wx.navigateTo(&#123;</span><br><span class="line">      url: &#39;..&#x2F;logistics&#x2F;logistics?dataList&#x3D;&#39; + dataList,&#x2F;&#x2F;传递参数</span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>二级页面接收展示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class&#x3D;&#39;page_row top&#39;&gt;</span><br><span class="line">  &lt;image class&#x3D;&quot;goods&quot; src&#x3D;&#39;..&#x2F;images&#x2F;sf.jpg&#39;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">  &lt;view class&#x3D;&#39;page_clu logistics&#39;&gt;</span><br><span class="line">    &lt;text&gt;物流公司: 顺丰速运&#123;&#123;wuliuType&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">    &lt;text&gt;物流单号:221009887344 &#123;&#123;wl_dh&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">    &lt;text&gt;官方电话:95338 &#123;&#123;wl_phone&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br><span class="line">&lt;view class&#x3D;&#39;br&#39;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;middle&quot;&gt;</span><br><span class="line">  &lt;view class&#x3D;&quot;top_sh&quot; hidden&#x3D;&quot;true&quot;&gt;</span><br><span class="line">    &lt;view class&#x3D;&#39;top_icon&#39;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">    &lt;text class&#x3D;&quot;address&quot;&gt;[收货地址]&#123;&#123;userAddress&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">    &lt;view class&#x3D;&#39;on&#39; style&#x3D;&quot;border-left:1px dashed #d0d0d0;&quot;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">  &lt;block wx:for&#x3D;&quot;&#123;&#123;Traces&#125;&#125;&quot; wx:key&#x3D;&quot;index&quot; hidden&#x3D;&quot;&#123;&#123;isShowWl&#125;&#125;&quot;&gt;</span><br><span class="line">    &lt;view class&#x3D;&#39;order&#39;&gt;</span><br><span class="line">      &lt;text class&#x3D;&quot;time&quot;&gt;&#123;&#123;item.time&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">      &lt;view class&#x3D;&#39;icon &#123;&#123;0&#x3D;&#x3D;index?&quot;in&quot;:&quot;no_in&quot;&#125;&#125;&#39;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">      &lt;view class&#x3D;&#39;logistics_centent page_clu&#39;&gt;</span><br><span class="line">        &lt;text&gt; &#123;&#123;item.context&#125;&#125;&lt;&#x2F;text&gt;</span><br><span class="line">      &lt;&#x2F;view&gt;</span><br><span class="line">      &lt;view wx:if&#x3D;&quot;&#123;&#123;index&#x3D;&#x3D;Traces.length-1&#125;&#125;&quot;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">      &lt;view wx:else class&#x3D;&#39;on&#39;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line">  &lt;&#x2F;block&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">   * 生命周期函数--监听页面加载</span><br><span class="line">   *&#x2F;</span><br><span class="line">  onLoad: function(options) &#123;</span><br><span class="line">      var dataTemp &#x3D; decodeURIComponent(options.dataList);&#x2F;&#x2F;函数可把字符串作为 URI 组件进行解码。</span><br><span class="line">      var Traces &#x3D; JSON.parse(dataTemp);&#x2F;&#x2F;航一页传过来的json字符串转化成json数组  物流信息进度</span><br><span class="line">      this.setData(&#123;</span><br><span class="line">        Traces: Traces</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>以上便是案例完整的代码，粘贴复制即用。最后说一下，所有的页面获取的数据都需要在onLoad()方法中执行。</p>
-
+          <p>小程序实践（四）--页面带参传值、JSON数据传递今天呢写了一个（物流跟踪）列子，将通过这个例子来向大家介绍一下小程序是如何带参跳转、JSON数组的传递与解析。先看下效果图</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E8%B7%B5%EF%BC%88%E5%9B%9B%EF%BC%89%E2%80%93%E9%A1%B5%E9%9D%A2%E5%B8%A6%E5%8F%82%E4%BC%A0%E5%80%BC%E3%80%81JSON%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -580,7 +556,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -602,7 +578,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-17 10:32:22" itemprop="dateModified" datetime="2020-01-17T10:32:22+08:00">2020-01-17</time>
+                <time title="修改时间：2020-08-21 15:56:29" itemprop="dateModified" datetime="2020-08-21T15:56:29+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -625,14 +601,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="小程序实践（三）–小程序切换按钮选中状态"><a href="#小程序实践（三）–小程序切换按钮选中状态" class="headerlink" title="小程序实践（三）–小程序切换按钮选中状态"></a>小程序实践（三）–小程序切换按钮选中状态</h2><p><strong>首先说一下为什么要单独写一个这个呢？在小程序中由于不能够直接对DOM元素进行操作，更没有像jquery那样addClass、removeClass这样简便方法对样式进行改变，个人觉得这个相对来说还是比较方便的，就拿出来在这里跟大家分享一下。如果你有更简单的不防写下来跟大家分享一下！</strong><br><strong>还是先看一下最终实现的效果</strong><br><img src="https://img-blog.csdnimg.cn/20200117103031283.gif" alt="在这里插入图片描述"><br><strong>接下来就看一下我们是如何实现的<br>1、布局排版，直接附上wxml代码：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 顶部办理状态 --&gt;</span><br><span class="line">&lt;view class&#x3D;&quot;topView&quot; style&#x3D;&quot;position:fixed;top:49px;left:0;z-index:200&quot;&gt;</span><br><span class="line">  &lt;block wx:for&#x3D;&quot;&#123;&#123;statusList&#125;&#125;&quot; wx:key&#x3D;&quot;id&quot;&gt;</span><br><span class="line">    &lt;view id&#x3D;&quot;&#123;&#123;item.id&#125;&#125;&quot; class&#x3D;&quot;&#123;&#123;item.id &#x3D;&#x3D; isChecked ? &#39;active&#39;:&#39;&#39;&#125;&#125; topChild&quot; bindtap&#x3D;&quot;choiceStatus&quot;&gt;&#123;&#123;item.statusName&#125;&#125;&lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;block&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>2、按钮样式，wxss代码：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">.topView&#123;</span><br><span class="line">  width:100%;</span><br><span class="line">  height:48px;</span><br><span class="line">  display:flex;</span><br><span class="line">  background-color: #ffffff;</span><br><span class="line">  border-bottom:1px solid #e2e1e1;</span><br><span class="line">&#125;</span><br><span class="line">.topChild&#123;</span><br><span class="line">  width:20%;</span><br><span class="line">  height:48px;</span><br><span class="line">  text-align: center;</span><br><span class="line">  line-height: 3.4;</span><br><span class="line">  font-size:14px;</span><br><span class="line">  color:#333333;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;*点击时按钮状态*&#x2F;</span><br><span class="line">.active&#123;</span><br><span class="line">  color:#E31904;</span><br><span class="line">  border-bottom:2px solid #E31904;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>3、最主要的来了，js代码：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">   * 页面的初始数据</span><br><span class="line">   *&#x2F;</span><br><span class="line">  data: &#123;</span><br><span class="line">    statusList: [&#123;&#x2F;&#x2F;顶部状态按钮</span><br><span class="line">      &quot;statusName&quot;: &quot;全部&quot;,</span><br><span class="line">      &quot;id&quot;: &quot;all&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;statusName&quot;: &quot;待支付&quot;,</span><br><span class="line">      &quot;id&quot;: &quot;draft&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;statusName&quot;: &quot;待发货&quot;,</span><br><span class="line">      &quot;id&quot;: &quot;waitSolve&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;statusName&quot;: &quot;已发货&quot;,</span><br><span class="line">      &quot;id&quot;: &quot;doingSolve&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;statusName&quot;: &quot;交易成功&quot;,</span><br><span class="line">      &quot;id&quot;: &quot;doneSolve&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    ],</span><br><span class="line">    isChecked: 0 &#x2F;&#x2F;判断是否选中</span><br><span class="line">  &#125;,</span><br><span class="line">  &#x2F;&#x2F;绑定顶部状态切换的点击事件</span><br><span class="line">  choiceStatus: function (e) &#123;</span><br><span class="line">    var that &#x3D; this;</span><br><span class="line">    var code &#x3D; e.currentTarget.id;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      isChecked: code</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-<p><strong>是不是很简单啊！！希望看到的大神，能给出更好的实现方法！！！     老师说过：好东西要拿出来大家分享一下哦！！哈哈。。。。。。</strong></p>
-
+          <p>首先说一下为什么要单独写一个这个呢？在小程序中由于不能够直接对DOM元素进行操作，更没有像jquery那样addClass、removeClass这样简便方法对样式进行改变，个人觉得这个相对来说还是比较方便的，就拿出来在这里跟大家分享一下。如果你有更简单的不防写下来跟大家</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E8%B7%B5%EF%BC%88%E4%B8%89%EF%BC%89%E2%80%93%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%87%E6%8D%A2%E6%8C%89%E9%92%AE%E9%80%89%E4%B8%AD%E7%8A%B6%E6%80%81/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -666,7 +643,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -688,7 +665,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-17 10:29:52" itemprop="dateModified" datetime="2020-01-17T10:29:52+08:00">2020-01-17</time>
+                <time title="修改时间：2020-08-21 16:00:12" itemprop="dateModified" datetime="2020-08-21T16:00:12+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -711,13 +688,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="小程序实践（二）–swiper轮播图组件"><a href="#小程序实践（二）–swiper轮播图组件" class="headerlink" title="小程序实践（二）–swiper轮播图组件"></a>小程序实践（二）–swiper轮播图组件</h2><p>依照惯例，先看效果图：<br><img src="https://img-blog.csdnimg.cn/20200117102910120.gif" alt="在这里插入图片描述"><br>先了解下swiper组件参数配置<br><img src="https://img-blog.csdnimg.cn/20200117102922965.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>轮播实现的具体步骤如下：</strong><br>  <strong>第一步：添加图片素材，我这边是放到images下，文件以及图片名字自定义即可。</strong><br><img src="https://img-blog.csdnimg.cn/20200117102932526.png" alt="在这里插入图片描述"><br>  <strong>第二步：在wxml中进行页面布局</strong><br>  在这里呢，用到了<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html">列表渲染</a> 、 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html">swiper组件</a>，三元运算符（注：由于小程序不能操作dom，三元运算符还有一个常用的使用场景是控件class样式输出，达到jQuery.addClass()的效果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class&#x3D;&quot;swiper-container&quot;&gt;</span><br><span class="line">  &lt;swiper autoplay&#x3D;&quot;auto&quot; interval&#x3D;&quot;5000&quot; duration&#x3D;&quot;500&quot; current&#x3D;&quot;&#123;&#123;swiperCurrent&#125;&#125;&quot; bindchange&#x3D;&quot;swiperChange&quot; class&#x3D;&quot;swiper&quot;&gt;</span><br><span class="line">    &lt;block wx:for&#x3D;&quot;&#123;&#123;slider&#125;&#125;&quot; wx:key&#x3D;&quot;unique&quot;&gt;</span><br><span class="line">      &lt;swiper-item&gt;</span><br><span class="line">        &lt;image src&#x3D;&quot;&#123;&#123;item.picUrl&#125;&#125;&quot; class&#x3D;&quot;img&quot; data-index&#x3D;&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">      &lt;&#x2F;swiper-item&gt;</span><br><span class="line">    &lt;&#x2F;block&gt;</span><br><span class="line">  &lt;&#x2F;swiper&gt;</span><br><span class="line">  &lt;view class&#x3D;&quot;dots&quot;&gt;</span><br><span class="line">    &lt;block wx:for&#x3D;&quot;&#123;&#123;slider&#125;&#125;&quot; wx:key&#x3D;&quot;unique&quot;&gt;</span><br><span class="line">      &lt;view class&#x3D;&quot;dot &#123;&#123;index &#x3D;&#x3D; swiperCurrent ? &#39; active&#39; : &#39;&#39;&#125;&#125;&quot;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">    &lt;&#x2F;block&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>第三步：在js中创建图片列表，以便于进入页面的时候就会渲染图片。</strong>　　　　　<br>　红色标注为，swiperChange方法中传入的参数用于三木运算符控制轮播图下面的圆点样式。
-　</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">   * 页面的初始数据</span><br><span class="line">   *&#x2F;</span><br><span class="line">  data: &#123;</span><br><span class="line">    slider:[</span><br><span class="line">      &#123;picUrl:&#39;..&#x2F;images&#x2F;1.jpg&#39;&#125;,</span><br><span class="line">      &#123; picUrl: &#39;..&#x2F;images&#x2F;2.jpg&#39; &#125;,</span><br><span class="line">      &#123; picUrl: &#39;..&#x2F;images&#x2F;3.jpg&#39; &#125;</span><br><span class="line">    ],</span><br><span class="line">    swiperCurrent:0,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#x2F;&#x2F;轮播 组件控制</span><br><span class="line">  swiperChange:function(e)&#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      swiperCurrent:e.detail.current</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-
-
+          <p>第一步：添加图片素材，我这边是放到images下，文件以及图片名字自定义即可。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E8%B7%B5%EF%BC%88%E4%BA%8C%EF%BC%89--swiper%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%BB%84%E4%BB%B6/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -751,7 +730,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -773,7 +752,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-01-16 15:55:44" itemprop="dateModified" datetime="2020-01-16T15:55:44+08:00">2020-01-16</time>
+                <time title="修改时间：2020-08-21 16:00:23" itemprop="dateModified" datetime="2020-08-21T16:00:23+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -796,19 +775,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="小程序base64格式图片的显示和保存"><a href="#小程序base64格式图片的显示和保存" class="headerlink" title="小程序base64格式图片的显示和保存"></a>小程序base64格式图片的显示和保存</h2><p>在小程序开发的过程中，我们在使用base64图片的时候，会出现图片不显示的问题，是为什么呢？今天在这里把自己的踩过的坑分享一下。<br>当我们拿到如下base64格式的图片（如下图）时，<br>base64格式的图片数据：<br><img src="https://img-blog.csdnimg.cn/20200116154325482.png" alt="在这里插入图片描述"><br><strong>一、如何显示 ？</strong><br>使用image标签，src属性添加data:image/png;base64,<br><font color=red>（注意：若imgData返回数据中含有data:image/png;base64,时，src直接写src=”“即可）</font></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;image src=<span class="string">&quot;data:image/png;base64,&#123;&#123;imgData&#125;&#125;&quot;</span>&gt;&lt;/image&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>如果按照上面的方法，图片还是显示不出来？</strong><br>在返回的base64的数据中存在回车换行，你只需要回车换行替换为’’即可。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 后台返回的base64数据</span></span><br><span class="line"><span class="keyword">var</span> base64Image = <span class="string">&#x27;base64数据&#x27;</span> </span><br><span class="line"><span class="comment">// 将回车换行换为空字符&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">var</span> imgData = base64Image.replace(<span class="regexp">/[\r\n]/g</span>, <span class="string">&#x27;&#x27;</span>) </span><br></pre></td></tr></table></figure>
-<p>然后用image标签的形式引入就可以正常显示了。<br><strong>二、那么如何保存？</strong><br>使用writeFile及saveImageToPhotosAlbum API保存至相册，具体JS代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> imgSrc =  <span class="built_in">this</span>.data.imgData;<span class="comment">//base64编码</span></span><br><span class="line">    <span class="keyword">var</span> save = wx.getFileSystemManager();</span><br><span class="line">    <span class="keyword">var</span> number = <span class="built_in">Math</span>.random();</span><br><span class="line">    save.writeFile(&#123;</span><br><span class="line">      filePath: wx.env.USER_DATA_PATH + <span class="string">&#x27;/pic&#x27;</span> + number + <span class="string">&#x27;.png&#x27;</span>,</span><br><span class="line">      data: imgSrc,</span><br><span class="line">      encoding: <span class="string">&#x27;base64&#x27;</span>,</span><br><span class="line">      success: <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        wx.saveImageToPhotosAlbum(&#123;</span><br><span class="line">          filePath: wx.env.USER_DATA_PATH + <span class="string">&#x27;/pic&#x27;</span> + number + <span class="string">&#x27;.png&#x27;</span>,</span><br><span class="line">          success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">              title: <span class="string">&#x27;保存成功&#x27;</span>,</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125;,</span><br><span class="line">          fail: <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(err)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="built_in">console</span>.log(res)</span><br><span class="line">      &#125;, <span class="attr">fail</span>: <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(err)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
-<p>本想使用wx.previewImage来预览图片并保存，但是此API的参数只能是网络链接，所以放弃，采用以上方法保存。</p>
-<p>说明：</p>
-<ol>
-<li>wx.getFileSystemManager()  是获取文件管理器对象</li>
-<li>wx.env.USER_DATA_PATH + ‘/pic’ + number + ‘.png’表示生成一个临时文件名</li>
-</ol>
-
+          <p>小程序base64格式图片的显示和保存 在小程序开发的过程中，我们在使用base64图片的时候，会出现图片不显示的问题，是为什么呢？今天在这里把自己的踩过的坑分享一下。 当我们拿到如下base64格式的图片（如下图）时， base64格式的图片数据：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%20base64%E6%A0%BC%E5%BC%8F%E5%9B%BE%E7%89%87%E7%9A%84%E6%98%BE%E7%A4%BA%E5%8F%8A%E4%BF%9D%E5%AD%98/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -842,7 +817,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -864,7 +839,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-24 15:30:16" itemprop="dateModified" datetime="2019-12-24T15:30:16+08:00">2019-12-24</time>
+                <time title="修改时间：2020-08-21 16:00:32" itemprop="dateModified" datetime="2020-08-21T16:00:32+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -887,11 +862,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="如何发布文章到自己搭建的hexo博客上"><a href="#如何发布文章到自己搭建的hexo博客上" class="headerlink" title="如何发布文章到自己搭建的hexo博客上"></a>如何发布文章到自己搭建的hexo博客上</h2><h2 id="1-选择一个markdown编辑器，我个人觉得csdn自带的md编辑器就挺好用的，你可以注册一个csdn帐号，直接微信扫一扫就可以；"><a href="#1-选择一个markdown编辑器，我个人觉得csdn自带的md编辑器就挺好用的，你可以注册一个csdn帐号，直接微信扫一扫就可以；" class="headerlink" title="1.选择一个markdown编辑器，我个人觉得csdn自带的md编辑器就挺好用的，你可以注册一个csdn帐号，直接微信扫一扫就可以；"></a>1.选择一个markdown编辑器，我个人觉得csdn自带的md编辑器就挺好用的，你可以注册一个csdn帐号，直接微信扫一扫就可以；</h2><h2 id="2-注册成功后登录进去，点击写博客，先了解下markdown编辑器基本的用法，然后就可以写博客了，写好之后导出到本地"><a href="#2-注册成功后登录进去，点击写博客，先了解下markdown编辑器基本的用法，然后就可以写博客了，写好之后导出到本地" class="headerlink" title="2.注册成功后登录进去，点击写博客，先了解下markdown编辑器基本的用法，然后就可以写博客了，写好之后导出到本地"></a>2.注册成功后登录进去，点击写博客，先了解下markdown编辑器基本的用法，然后就可以写博客了，写好之后导出到本地</h2><p><img src="https://img-blog.csdnimg.cn/20191114102323454.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如图，点击后选择MarkDown，会下载一个 .md 文件；然后找到这个md文件，把它复制到你hexo博客文件夹 中 source  下的  _posts 中，默认只有一个 hello-world.md；</p>
-<h2 id="3-复制完之后然后使用文本编辑器打开它，在第一行加上title，内容自定，如"><a href="#3-复制完之后然后使用文本编辑器打开它，在第一行加上title，内容自定，如" class="headerlink" title="3. 复制完之后然后使用文本编辑器打开它，在第一行加上title，内容自定，如"></a>3. 复制完之后然后使用文本编辑器打开它，在第一行加上title，内容自定，如</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title : <span class="string">&quot;Vue中观察者模式介绍&quot;</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<h2 id="5-在你自己博客站点文件夹空白处右键选择GitBashHere-输入-hexo-generate-也可以简化输入Hexo-g-，命令执行完就可以生成静态文件"><a href="#5-在你自己博客站点文件夹空白处右键选择GitBashHere-输入-hexo-generate-也可以简化输入Hexo-g-，命令执行完就可以生成静态文件" class="headerlink" title="5.在你自己博客站点文件夹空白处右键选择GitBashHere 输入 hexo generate(也可以简化输入Hexo g)，命令执行完就可以生成静态文件"></a>5.在你自己博客站点文件夹空白处右键选择GitBashHere 输入 hexo generate(也可以简化输入Hexo g)，命令执行完就可以生成静态文件</h2><p><img src="https://img-blog.csdnimg.cn/20191114102651345.png" alt="在这里插入图片描述"></p>
-<h2 id="6-输入-hexo-server启动本地服务器，输入localhost-4000，直接在本地进行预览"><a href="#6-输入-hexo-server启动本地服务器，输入localhost-4000，直接在本地进行预览" class="headerlink" title="6 输入 hexo server启动本地服务器，输入localhost:4000，直接在本地进行预览"></a>6 输入 hexo server启动本地服务器，输入localhost:4000，直接在本地进行预览</h2><h2 id="7-最后输入hexo-deploy-hexo-d-，将本地文件发布到github等git仓库上"><a href="#7-最后输入hexo-deploy-hexo-d-，将本地文件发布到github等git仓库上" class="headerlink" title="7 最后输入hexo deploy(hexo d)，将本地文件发布到github等git仓库上"></a>7 最后输入hexo deploy(hexo d)，将本地文件发布到github等git仓库上</h2><p><img src="https://img-blog.csdnimg.cn/2019111410405792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3podW1lbmdfMQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>这样文章就发布到自己搭建的HEXO博客上了</strong></p>
-
+          <p>如何发布文章到自己搭建的hexo博客上 ## 1.选择一个markdown编辑器，我个人觉得csdn自带的md编辑器就挺好用的，你可以注册一个csdn帐号，直接微信扫一扫就可以； ## 2.注册成功后登录进去，点击写博客，先了解下markdown编辑器基本的用法，然后就可以写博客了，写好之后导出到本地</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%A6%82%E4%BD%95%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E5%88%B0%E8%87%AA%E5%B7%B1%E6%90%AD%E5%BB%BA%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E4%B8%8A%EF%BC%81/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -925,7 +904,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -947,7 +926,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-24 15:28:48" itemprop="dateModified" datetime="2019-12-24T15:28:48+08:00">2019-12-24</time>
+                <time title="修改时间：2020-08-21 16:03:47" itemprop="dateModified" datetime="2020-08-21T16:03:47+08:00">2020-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -970,17 +949,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前端优化–图片懒加载"><a href="#前端优化–图片懒加载" class="headerlink" title="前端优化–图片懒加载##"></a><strong>前端优化–图片懒加载</strong>##</h2><p><strong>一、什么事懒加载</strong><br>    懒加载技术(简称lazyload)是对网页性能优化的一种方案。lazyload的核心是按需加载，避免网页打开时加载过多资源，让用户等待太久，在适当的时候加载用户需要的资源(这里用户需要的资源指该资源呈现在浏览器可视区域)。这里我们主要是对img标签使用懒加载技术，使用jquery的query.lazyload.js库实现。<br>    通俗的讲就是：当访问一个页面的时候，先把img元素或是其他元素的背景图片路径替换成一张大小为1*1px图片的路径（这样就只需请求一次），只有当图片出现在浏览器的可视区域内时，才设置图片真正的路径，让图片显示出来。这就是图片懒加载。<br><strong>二、为何要是用懒加载技术？</strong><br>    比如一个页面中有很多图片，如淘宝、京东首页等等，如果一上来就发送这么多请求，页面加载就会很漫长，如果js文件都放在了文档的底部，恰巧页面的头部又依赖这个js文件，那就不好办了。更为要命的是：一上来就发送百八十个请求，服务器可能就吃不消了（又不是只有一两个人在访问这个页面）。因此优点就很明显了：不仅可以减轻服务器的压力，而且可以让加载好的页面更快地呈现在用户面前（用户体验好）。<br><strong>三、如何实现</strong><br>主要有以下2个关键点：<br>       1、页面中的img元素，如果没有src属性，浏览器就不会发出请求去下载图片（也就没有请求咯，也就提高性能咯），一旦通过javascript设置了图片路径，浏览器才会送请求。有点按需分配的意思，你不想看，就不给你看，你想看了就给你看    　2、怎么获取真正的路径，这个简单，现在真正的路径存在元素的“data-original（这个名字起个自己认识好记的就行）属性里，要用的时候就取出来，再设置；　       </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">第一步，引入懒加载所需的js文件</span><br><span class="line">&lt;script src&#x3D;&quot;jquery.lazyload.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">第二步，img标签的属性如下：</span><br><span class="line">&lt;img class&#x3D;&quot;lazy&quot; data-original&#x3D;&quot;img&#x2F;example.jpg&quot; width&#x3D;&quot;640&quot; height&#x3D;&quot;480&quot;&gt;</span><br><span class="line">第三步，在对应的js文件中，对img标签调用如下imgLazyLoad方法.</span><br></pre></td></tr></table></figure>
-
-
-<p><strong>四、懒加载方法</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function imgLazyLoad(param,$dom)&#123;  </span><br><span class="line">      var placeholder &#x3D; baseUrl + &#39;&#x2F;lar-ui&#x2F;imgs&#x2F;placeholder&#x2F;0.png&#39;;   </span><br><span class="line">      var extendParam &#x3D; $.extend(&#123;effect: &#39;fadeIn&#39;,placeholder: placeholder&#125;, param);    </span><br><span class="line">      if($dom)&#123;      </span><br><span class="line">        $($dom).find(&#39;img.lazy&#39;).lazyload(extendParam);   </span><br><span class="line">      &#125;else&#123;       </span><br><span class="line">       $(&#39;img.lazy&#39;).lazyload(extendParam);    </span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>参数说明：<br>    1)$dom为实施懒加载的dom元素，param对象中的参数含义如下　　<br>    2)Placeholder : “img/grey.gif”, //用图片提前占位。　　<br>    3)threshold : 200, //提前开始加载。值为数字，代表的页面高度。目的在于加载图片时可以做到不让用户察觉。　　<br>    4)event : “click”, //事件触发时才加载，值有click,mouseover,foobar等，可以像这样触发：find(‘img.lazy’).trigger(‘foobar’)。　　<br>    5)effect : “fadeIn” ,//载入使用何种效果,effect(特效),值有show(直接显示),fadeIn(淡入),slideDown(下拉)等。　　<br>    6)container: $(“#container”)//容器内水平滚动效果,滚动时按需加载。Lazyload默认是在拉动浏览器滚动条的时候生效，这个参数还可以让你在拉动某个DIV的滚动条时依次加载其中图片　　<br>    7)failurelimit:图片排序混乱时,值为数字，lazyload默认在找到第一张不在可视区域里的图片时则不在继续加载，如果当HTML容器里混乱的时候有可能会出现可见区域内的图片加载不出来的情况，failurelimit意在加载N张可见区域外的图片，避免出现这个问题。<br><strong>五、方法调用</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">imgLazyLoad(    </span><br><span class="line">    &#123;effect:&#39;show&#39;&#125;,&#x2F;&#x2F;载入时的效果</span><br><span class="line">    $(&#39;#myCarousel&#39;)&#x2F;&#x2F;获取需要实施懒加载的DOM元素</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-
+          <p>一、什么事懒加载懒加载技术(简称lazyload)是对网页性能优化的一种方案。lazyload的核心是按需加载，避免网页打开时加载过多资源，让用户等待太久，在适当的时候加载用户需要的资源(这里用户需要的资源指该资源呈现在浏览器可视区域)。这里我们主要是对img标签使用懒加载技术，使用jquery的query.lazyload.js库实现。通俗的讲就是：当访问一个页面的时候，先把img元素或是其他元素的背景图片路径替换成一张大小为1*1px图片的路径（这样就只需请求一次），只有当图片出现在浏览器的</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E2%80%93%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1014,7 +991,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Jqk">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -1036,8 +1013,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-01-24 10:55:08" itemprop="dateModified" datetime="2019-01-24T10:55:08+08:00">2019-01-24</time>
+                <time title="修改时间：2020-08-21 16:01:02" itemprop="dateModified" datetime="2020-08-21T16:01:02+08:00">2020-08-21</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index"><span itemprop="name">小程序</span></a>
+                </span>
+            </span>
 
           
 
@@ -1050,13 +1036,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="小程序实践（二）–swiper轮播图组件"><a href="#小程序实践（二）–swiper轮播图组件" class="headerlink" title="小程序实践（二）–swiper轮播图组件"></a>小程序实践（二）–swiper轮播图组件</h2><p>依照惯例，先看效果图：<br><img src="../images/xcx_1.gif" alt="效果图"><br>先了解下swiper组件参数配置<br><img src="../images/xcx_2.png" alt="swiper组件参数xcx_2"><br><strong>轮播实现的具体步骤如下：</strong><br>  <strong>第一步：添加图片素材，我这边是放到images下，文件以及图片名字自定义即可。</strong><br>  <img src="../images/xcx_3.png" alt="图片素材文件路径xcx_3"><br>  <strong>第二步：在wxml中进行页面布局</strong><br>  在这里呢，用到了<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html">列表渲染</a> 、 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html">swiper组件</a>，三元运算符（注：由于小程序不能操作dom，三元运算符还有一个常用的使用场景是控件class样式输出，达到jQuery.addClass()的效果</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class&#x3D;&quot;swiper-container&quot;&gt;</span><br><span class="line">  &lt;swiper autoplay&#x3D;&quot;auto&quot; interval&#x3D;&quot;5000&quot; duration&#x3D;&quot;500&quot; current&#x3D;&quot;&#123;&#123;swiperCurrent&#125;&#125;&quot; bindchange&#x3D;&quot;swiperChange&quot; class&#x3D;&quot;swiper&quot;&gt;</span><br><span class="line">    &lt;block wx:for&#x3D;&quot;&#123;&#123;slider&#125;&#125;&quot; wx:key&#x3D;&quot;unique&quot;&gt;</span><br><span class="line">      &lt;swiper-item&gt;</span><br><span class="line">        &lt;image src&#x3D;&quot;&#123;&#123;item.picUrl&#125;&#125;&quot; class&#x3D;&quot;img&quot; data-index&#x3D;&quot;&#123;&#123;index&#125;&#125;&quot;&gt;&lt;&#x2F;image&gt;</span><br><span class="line">      &lt;&#x2F;swiper-item&gt;</span><br><span class="line">    &lt;&#x2F;block&gt;</span><br><span class="line">  &lt;&#x2F;swiper&gt;</span><br><span class="line">  &lt;view class&#x3D;&quot;dots&quot;&gt;</span><br><span class="line">    &lt;block wx:for&#x3D;&quot;&#123;&#123;slider&#125;&#125;&quot; wx:key&#x3D;&quot;unique&quot;&gt;</span><br><span class="line">      &lt;view class&#x3D;&quot;dot &#123;&#123;index &#x3D;&#x3D; swiperCurrent ? &#39; active&#39; : &#39;&#39;&#125;&#125;&quot;&gt;&lt;&#x2F;view&gt;</span><br><span class="line">    &lt;&#x2F;block&gt;</span><br><span class="line">  &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;view&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>第三步：在js中创建图片列表，以便于进入页面的时候就会渲染图片。</strong>　　　　　<br>　红色标注为，swiperChange方法中传入的参数用于三木运算符控制轮播图下面的圆点样式。
-　</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line">   * 页面的初始数据</span><br><span class="line">   *&#x2F;</span><br><span class="line">  data: &#123;</span><br><span class="line">    slider:[</span><br><span class="line">      &#123;picUrl:&#39;..&#x2F;images&#x2F;1.jpg&#39;&#125;,</span><br><span class="line">      &#123; picUrl: &#39;..&#x2F;images&#x2F;2.jpg&#39; &#125;,</span><br><span class="line">      &#123; picUrl: &#39;..&#x2F;images&#x2F;3.jpg&#39; &#125;</span><br><span class="line">    ],</span><br><span class="line">    swiperCurrent:0,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#x2F;&#x2F;轮播 组件控制</span><br><span class="line">  swiperChange:function(e)&#123;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      swiperCurrent:e.detail.current</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-
-
+          <p>第一步：添加图片素材，我这边是放到images下，文件以及图片名字自定义即可</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/08/19/xcxPicRange/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1155,7 +1143,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
